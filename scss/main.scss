@@ -1,0 +1,23 @@
+* {
+    Margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin color-invertido($bg, $color) {
+    background-color: $bg;
+    color: $color;
+}
+
+body {
+    @include color-invertido(black, red)
+}
+
+.parrafo {
+    font-size: 1rem;
+}
+
+.parrafo--azul {
+    @extend .parrafo;
+    color: blue;
+}
